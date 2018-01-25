@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Animations Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnimationsController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uq5-bl-RZF">
+                                <rect key="frame" x="82.5" y="30" width="210" height="29"/>
+                                <segments>
+                                    <segment title="Left"/>
+                                    <segment title="Right"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeOrientation:" destination="BYZ-38-t0r" eventType="valueChanged" id="ul9-d1-EDB"/>
+                                </connections>
+                            </segmentedControl>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kOh-Kn-WMU">
+                                <rect key="frame" x="67.5" y="338" width="240" height="245"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20z-KR-X9B">
+                                        <rect key="frame" x="25" y="0.0" width="190" height="49"/>
+                                        <state key="normal" title="Idle" backgroundImage="blue_button13"/>
+                                        <connections>
+                                            <action selector="showIdleAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0OR-vk-Inl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bse-IB-Zas">
+                                        <rect key="frame" x="25" y="49" width="190" height="49"/>
+                                        <state key="normal" title="Walk" backgroundImage="blue_button13"/>
+                                        <connections>
+                                            <action selector="showWalkAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z14-WT-FkZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7e-c8-CJY">
+                                        <rect key="frame" x="25" y="98" width="190" height="49"/>
+                                        <state key="normal" title="Run" backgroundImage="blue_button13"/>
+                                        <connections>
+                                            <action selector="showRunAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaP-RA-Y20"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRs-Yj-KlF">
+                                        <rect key="frame" x="25" y="147" width="190" height="49"/>
+                                        <state key="normal" title="Jump" backgroundImage="blue_button13"/>
+                                        <connections>
+                                            <action selector="showJumpAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rt-8p-K1V"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYW-A6-0rq">
+                                        <rect key="frame" x="25" y="196" width="190" height="49"/>
+                                        <state key="normal" title="Shoot" backgroundImage="blue_button13"/>
+                                        <connections>
+                                            <action selector="showShootAnimation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1n-Bf-yZc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMg-7D-V7n">
+                                <rect key="frame" x="37" y="98" width="300" height="200"/>
+                            </skView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lMg-7D-V7n" firstAttribute="top" secondItem="uq5-bl-RZF" secondAttribute="bottom" constant="40" id="9cq-FT-xe2"/>
+                            <constraint firstItem="kOh-Kn-WMU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MRm-PW-pWA"/>
+                            <constraint firstItem="lMg-7D-V7n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pnx-61-SIe"/>
+                            <constraint firstItem="uq5-bl-RZF" firstAttribute="width" secondItem="lMg-7D-V7n" secondAttribute="width" multiplier="0.7" id="Q2Y-nc-9QJ"/>
+                            <constraint firstItem="kOh-Kn-WMU" firstAttribute="width" secondItem="lMg-7D-V7n" secondAttribute="width" multiplier="0.8" id="dFr-cj-0fr"/>
+                            <constraint firstItem="kOh-Kn-WMU" firstAttribute="top" secondItem="lMg-7D-V7n" secondAttribute="bottom" constant="40" id="ged-aG-L0B"/>
+                            <constraint firstItem="lMg-7D-V7n" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="grq-l7-0b5"/>
+                            <constraint firstItem="uq5-bl-RZF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="i1Y-r7-eXU"/>
+                            <constraint firstItem="uq5-bl-RZF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mHa-iV-qAL"/>
+                            <constraint firstItem="lMg-7D-V7n" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="xJh-uu-2ay"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="orientationSegmentedControl" destination="uq5-bl-RZF" id="ito-Br-F1a"/>
+                        <outlet property="skView" destination="lMg-7D-V7n" id="vML-eI-ZRB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-9" y="267"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue_button13" width="190" height="49"/>
+    </resources>
 </document>
