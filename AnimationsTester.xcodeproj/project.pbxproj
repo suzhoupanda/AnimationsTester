@@ -10,6 +10,9 @@
 		BD15912B201A025A00B902E7 /* AnimationScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BD15912A201A025A00B902E7 /* AnimationScene.m */; };
 		BD159133201A032700B902E7 /* DesertHero.m in Sources */ = {isa = PBXBuildFile; fileRef = BD15912D201A032500B902E7 /* DesertHero.m */; };
 		BD159134201A032700B902E7 /* DesertHero+AnimationsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = BD15912F201A032600B902E7 /* DesertHero+AnimationsGenerator.m */; };
+		BD9B0E12201DE20D00B2E6BE /* AnimationDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9B0E11201DE20D00B2E6BE /* AnimationDownloadOperation.m */; };
+		BD9B0E14201DE89000B2E6BE /* TextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9B0E13201DE89000B2E6BE /* TextureManager.m */; };
+		BD9B0E19201DEDCA00B2E6BE /* DownloadableAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9B0E18201DEDCA00B2E6BE /* DownloadableAnimation.m */; };
 		BDA6E87D2019FBD800E5F42B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E87C2019FBD800E5F42B /* AppDelegate.m */; };
 		BDA6E8802019FBD800E5F42B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E87F2019FBD800E5F42B /* ViewController.m */; };
 		BDA6E8832019FBD800E5F42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDA6E8812019FBD800E5F42B /* Main.storyboard */; };
@@ -19,6 +22,7 @@
 		BDA6E8952019FBD800E5F42B /* AnimationsTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E8942019FBD800E5F42B /* AnimationsTesterTests.m */; };
 		BDA6E8A02019FBD800E5F42B /* AnimationsTesterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E89F2019FBD800E5F42B /* AnimationsTesterUITests.m */; };
 		BDA6E8AF2019FE9400E5F42B /* AnimationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */; };
+		BDB401EE201DD69400BC9408 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB401ED201DD69400BC9408 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,13 @@
 		BD159130201A032600B902E7 /* DesertCharacterOrientation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DesertCharacterOrientation.h; sourceTree = "<group>"; };
 		BD159131201A032700B902E7 /* DesertHero+AnimationsGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DesertHero+AnimationsGenerator.h"; sourceTree = "<group>"; };
 		BD159132201A032700B902E7 /* AnimationType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationType.h; sourceTree = "<group>"; };
+		BD9B0E10201DE1EE00B2E6BE /* AnimationDownloadOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDownloadOperation.h; sourceTree = "<group>"; };
+		BD9B0E11201DE20D00B2E6BE /* AnimationDownloadOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationDownloadOperation.m; sourceTree = "<group>"; };
+		BD9B0E13201DE89000B2E6BE /* TextureManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureManager.m; sourceTree = "<group>"; };
+		BD9B0E15201DE8A200B2E6BE /* TextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
+		BD9B0E16201DED6700B2E6BE /* AnimationDownloadDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationDownloadDelegate.h; sourceTree = "<group>"; };
+		BD9B0E17201DEDBB00B2E6BE /* DownloadableAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadableAnimation.h; sourceTree = "<group>"; };
+		BD9B0E18201DEDCA00B2E6BE /* DownloadableAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadableAnimation.m; sourceTree = "<group>"; };
 		BDA6E8782019FBD800E5F42B /* AnimationsTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA6E87B2019FBD800E5F42B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDA6E87C2019FBD800E5F42B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -65,6 +76,8 @@
 		BDA6E8A12019FBD800E5F42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA6E8AD2019FE8700E5F42B /* AnimationsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsController.h; sourceTree = "<group>"; };
 		BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationsController.m; sourceTree = "<group>"; };
+		BDB401EB201DD54200BC9408 /* AnimationsTester.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnimationsTester.entitlements; sourceTree = "<group>"; };
+		BDB401ED201DD69400BC9408 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDB401EE201DD69400BC9408 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +113,7 @@
 				BDA6E8932019FBD800E5F42B /* AnimationsTesterTests */,
 				BDA6E89E2019FBD800E5F42B /* AnimationsTesterUITests */,
 				BDA6E8792019FBD800E5F42B /* Products */,
+				BDB401EC201DD69400BC9408 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,7 +130,13 @@
 		BDA6E87A2019FBD800E5F42B /* AnimationsTester */ = {
 			isa = PBXGroup;
 			children = (
+				BDB401EB201DD54200BC9408 /* AnimationsTester.entitlements */,
 				BD159132201A032700B902E7 /* AnimationType.h */,
+				BD9B0E16201DED6700B2E6BE /* AnimationDownloadDelegate.h */,
+				BD9B0E17201DEDBB00B2E6BE /* DownloadableAnimation.h */,
+				BD9B0E18201DEDCA00B2E6BE /* DownloadableAnimation.m */,
+				BD9B0E10201DE1EE00B2E6BE /* AnimationDownloadOperation.h */,
+				BD9B0E11201DE20D00B2E6BE /* AnimationDownloadOperation.m */,
 				BD159130201A032600B902E7 /* DesertCharacterOrientation.h */,
 				BD15912E201A032500B902E7 /* DesertHero.h */,
 				BD15912D201A032500B902E7 /* DesertHero.m */,
@@ -134,6 +155,8 @@
 				BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */,
 				BD15912A201A025A00B902E7 /* AnimationScene.m */,
 				BD15912C201A026300B902E7 /* AnimationScene.h */,
+				BD9B0E15201DE8A200B2E6BE /* TextureManager.h */,
+				BD9B0E13201DE89000B2E6BE /* TextureManager.m */,
 			);
 			path = AnimationsTester;
 			sourceTree = "<group>";
@@ -154,6 +177,14 @@
 				BDA6E8A12019FBD800E5F42B /* Info.plist */,
 			);
 			path = AnimationsTesterUITests;
+			sourceTree = "<group>";
+		};
+		BDB401EC201DD69400BC9408 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDB401ED201DD69400BC9408 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +255,14 @@
 					BDA6E8772019FBD800E5F42B = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					BDA6E88F2019FBD800E5F42B = {
 						CreatedOnToolsVersion = 9.0;
@@ -289,8 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9B0E12201DE20D00B2E6BE /* AnimationDownloadOperation.m in Sources */,
 				BDA6E8AF2019FE9400E5F42B /* AnimationsController.m in Sources */,
 				BDA6E8802019FBD800E5F42B /* ViewController.m in Sources */,
+				BD9B0E14201DE89000B2E6BE /* TextureManager.m in Sources */,
+				BD9B0E19201DEDCA00B2E6BE /* DownloadableAnimation.m in Sources */,
 				BD15912B201A025A00B902E7 /* AnimationScene.m in Sources */,
 				BDA6E88B2019FBD800E5F42B /* main.m in Sources */,
 				BD159134201A032700B902E7 /* DesertHero+AnimationsGenerator.m in Sources */,
@@ -458,7 +500,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnimationsTester/AnimationsTester.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
 				INFOPLIST_FILE = AnimationsTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChangzhouPanda.AnimationsTester;
@@ -471,7 +515,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AnimationsTester/AnimationsTester.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9J39WJJ9G;
 				INFOPLIST_FILE = AnimationsTester/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ChangzhouPanda.AnimationsTester;
