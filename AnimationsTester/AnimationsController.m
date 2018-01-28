@@ -12,6 +12,7 @@
 #import "AnimationScene.h"
 #import "AnimationType.h"
 #import "DesertCharacterOrientation.h"
+#import "TextureManager.h"
 
 
 @interface AnimationsController()
@@ -33,11 +34,17 @@
 
 -(void)viewDidLoad{
     
+    
+    
     CGSize size = self.skView.bounds.size;
     
     self.animationScene = [[AnimationScene alloc] initWithSize:size];
     
     [self.skView presentScene:self.animationScene];
+    
+    
+  
+
 }
 
 - (IBAction)changeOrientation:(UISegmentedControl *)sender {

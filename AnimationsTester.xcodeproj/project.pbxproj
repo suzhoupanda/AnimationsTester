@@ -19,6 +19,7 @@
 		BDA6E8952019FBD800E5F42B /* AnimationsTesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E8942019FBD800E5F42B /* AnimationsTesterTests.m */; };
 		BDA6E8A02019FBD800E5F42B /* AnimationsTesterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E89F2019FBD800E5F42B /* AnimationsTesterUITests.m */; };
 		BDA6E8AF2019FE9400E5F42B /* AnimationsController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */; };
+		BDB4011B201DA5E700BC9408 /* TextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB4011A201DA5E700BC9408 /* TextureManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		BDA6E8A12019FBD800E5F42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA6E8AD2019FE8700E5F42B /* AnimationsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnimationsController.h; sourceTree = "<group>"; };
 		BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimationsController.m; sourceTree = "<group>"; };
+		BDB4011A201DA5E700BC9408 /* TextureManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextureManager.m; sourceTree = "<group>"; };
+		BDB4011C201DA5F200BC9408 /* TextureManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,8 @@
 				BDA6E8AE2019FE9400E5F42B /* AnimationsController.m */,
 				BD15912A201A025A00B902E7 /* AnimationScene.m */,
 				BD15912C201A026300B902E7 /* AnimationScene.h */,
+				BDB4011A201DA5E700BC9408 /* TextureManager.m */,
+				BDB4011C201DA5F200BC9408 /* TextureManager.h */,
 			);
 			path = AnimationsTester;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				BD159134201A032700B902E7 /* DesertHero+AnimationsGenerator.m in Sources */,
 				BD159133201A032700B902E7 /* DesertHero.m in Sources */,
 				BDA6E87D2019FBD800E5F42B /* AppDelegate.m in Sources */,
+				BDB4011B201DA5E700BC9408 /* TextureManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

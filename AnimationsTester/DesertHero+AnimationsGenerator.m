@@ -7,10 +7,19 @@
 //
 
 #import "DesertHero+AnimationsGenerator.h"
+#import "TextureManager.h"
 
+
+@interface DesertHero()
+
+
+@property (readonly) TextureManager* sharedManager;
+
+@end
 
 
 @implementation DesertHero (AnimationsGenerator)
+
 
 const static double kIdleActionDuration = 0.40;
 const static double kRunActionDuration = 0.30;
@@ -72,31 +81,31 @@ const static double kWalkActionDuration = 0.30;
     switch (orientation) {
         case LEFT:
             idleAction = [SKAction animateWithTextures:@[
-             [SKTexture textureWithImageNamed:@"IdleLeft_000"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_001"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_002"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_003"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_004"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_005"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_006"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_007"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_008"],
-             [SKTexture textureWithImageNamed:@"IdleLeft_009"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_000"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_001"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_002"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_003"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_004"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_005"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_006"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_007"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_008"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleLeft_009"],
 
              ] timePerFrame:kIdleActionDuration];
             break;
         case RIGHT:
             idleAction = [SKAction animateWithTextures:@[
-             [SKTexture textureWithImageNamed:@"IdleRight_000"],
-             [SKTexture textureWithImageNamed:@"IdleRight_001"],
-             [SKTexture textureWithImageNamed:@"IdleRight_002"],
-             [SKTexture textureWithImageNamed:@"IdleRight_003"],
-             [SKTexture textureWithImageNamed:@"IdleRight_004"],
-             [SKTexture textureWithImageNamed:@"IdleRight_005"],
-             [SKTexture textureWithImageNamed:@"IdleRight_006"],
-             [SKTexture textureWithImageNamed:@"IdleRight_007"],
-             [SKTexture textureWithImageNamed:@"IdleRight_008"],
-             [SKTexture textureWithImageNamed:@"IdleRight_009"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_000"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_001"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_002"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_003"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_004"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_005"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_006"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_007"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_008"],
+             [[self.sharedManager idleTextureAtlas] textureNamed:@"IdleRight_009"],
 
                  ] timePerFrame:kIdleActionDuration];
             break;
@@ -116,31 +125,34 @@ const static double kWalkActionDuration = 0.30;
 -(SKAction *)generateRunAnimation:(DesertCharacterOrientation)orientation{
     
     SKAction*(^getRunAnimation)(DesertCharacterOrientation) = [self getAnimationGeneratorWithLeftOrientationTextures:@[
-           [SKTexture textureWithImageNamed:@"RunLeft_000"],
-           [SKTexture textureWithImageNamed:@"RunLeft_001"],
-           [SKTexture textureWithImageNamed:@"RunLeft_002"],
-           [SKTexture textureWithImageNamed:@"RunLeft_003"],
-           [SKTexture textureWithImageNamed:@"RunLeft_004"],
-           [SKTexture textureWithImageNamed:@"RunLeft_005"],
-           [SKTexture textureWithImageNamed:@"RunLeft_006"],
-           [SKTexture textureWithImageNamed:@"RunLeft_007"],
-           [SKTexture textureWithImageNamed:@"RunLeft_008"],
-           [SKTexture textureWithImageNamed:@"RunLeft_009"]
-           
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_000"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_001"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_002"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_003"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_004"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_005"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_006"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_007"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_008"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunLeft_009"],
+
        ]
       
       andWithRightOrientationTexture:@[
       
-           [SKTexture textureWithImageNamed:@"RunRight_000"],
-           [SKTexture textureWithImageNamed:@"RunRight_001"],
-           [SKTexture textureWithImageNamed:@"RunRight_002"],
-           [SKTexture textureWithImageNamed:@"RunRight_003"],
-           [SKTexture textureWithImageNamed:@"RunRight_004"],
-           [SKTexture textureWithImageNamed:@"RunRight_005"],
-           [SKTexture textureWithImageNamed:@"RunRight_006"],
-           [SKTexture textureWithImageNamed:@"RunRight_007"],
-           [SKTexture textureWithImageNamed:@"RunRight_008"],
-           [SKTexture textureWithImageNamed:@"RunRight_009"]
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_000"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_001"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_002"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_003"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_004"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_005"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_006"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_007"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_008"],
+           [[self.sharedManager runTextureAtlas] textureNamed:@"RunRight_009"],
+
+
+
       ] andWithSymmetricOrientationTextures: nil
      andWithTimePerFrame:kRunActionDuration];
     
@@ -152,29 +164,29 @@ const static double kWalkActionDuration = 0.30;
     
     SKAction*(^getJumpAnimation)(DesertCharacterOrientation) = [self getAnimationGeneratorWithLeftOrientationTextures:@[
         
-    [SKTexture textureWithImageNamed:@"JumpLeft_000"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_001"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_002"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_003"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_004"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_005"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_006"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_007"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_008"],
-    [SKTexture textureWithImageNamed:@"JumpLeft_009"]
-                                                                                                            
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_000"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_001"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_002"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_003"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_004"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_005"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_006"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_007"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_008"],
+    [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpLeft_009"],
+
         ] andWithRightOrientationTexture:@[
        
-   [SKTexture textureWithImageNamed:@"JumpRight_000"],
-   [SKTexture textureWithImageNamed:@"JumpRight_001"],
-   [SKTexture textureWithImageNamed:@"JumpRight_002"],
-   [SKTexture textureWithImageNamed:@"JumpRight_003"],
-   [SKTexture textureWithImageNamed:@"JumpRight_004"],
-   [SKTexture textureWithImageNamed:@"JumpRight_005"],
-   [SKTexture textureWithImageNamed:@"JumpRight_006"],
-   [SKTexture textureWithImageNamed:@"JumpRight_007"],
-   [SKTexture textureWithImageNamed:@"JumpRight_008"],
-   [SKTexture textureWithImageNamed:@"JumpRight_009"]
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_000"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_001"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_002"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_003"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_004"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_005"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_006"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_007"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_008"],
+   [[self.sharedManager jumpTextureAtlas] textureNamed:@"JumpRight_009"],
        ] andWithSymmetricOrientationTextures:nil andWithTimePerFrame:kJumpActionDuration];
     
     return getJumpAnimation(orientation);
@@ -186,32 +198,31 @@ const static double kWalkActionDuration = 0.30;
     
     SKAction*(^getShootAnimation)(DesertCharacterOrientation) = [self getAnimationGeneratorWithLeftOrientationTextures:
   @[
-    [SKTexture textureWithImageNamed:@"ShootLeft_000"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_001"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_002"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_003"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_004"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_005"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_006"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_007"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_008"],
-    [SKTexture textureWithImageNamed:@"ShootLeft_009"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_000"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_001"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_002"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_003"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_004"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_005"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_006"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_007"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_008"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootLeft_009"],
 
-
-    
     ]
     andWithRightOrientationTexture:
   @[
-    [SKTexture textureWithImageNamed:@"ShootRight_000"],
-    [SKTexture textureWithImageNamed:@"ShootRight_001"],
-    [SKTexture textureWithImageNamed:@"ShootRight_002"],
-    [SKTexture textureWithImageNamed:@"ShootRight_003"],
-    [SKTexture textureWithImageNamed:@"ShootRight_004"],
-    [SKTexture textureWithImageNamed:@"ShootRight_005"],
-    [SKTexture textureWithImageNamed:@"ShootRight_006"],
-    [SKTexture textureWithImageNamed:@"ShootRight_007"],
-    [SKTexture textureWithImageNamed:@"ShootRight_008"],
-    [SKTexture textureWithImageNamed:@"ShootRight_009"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_000"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_001"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_002"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_003"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_004"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_005"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_006"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_007"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_008"],
+    [[self.sharedManager shootTextureAtlas] textureNamed:@"ShootRight_009"],
+
 
 
     ]
@@ -228,31 +239,31 @@ const static double kWalkActionDuration = 0.30;
     
     SKAction*(^getWalkAnimation)(DesertCharacterOrientation) = [self getAnimationGeneratorWithLeftOrientationTextures:
   @[
-    [SKTexture textureWithImageNamed:@"WalkLeft_000"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_001"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_002"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_003"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_004"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_005"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_006"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_007"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_008"],
-    [SKTexture textureWithImageNamed:@"WalkLeft_009"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_000"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_001"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_002"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_003"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_004"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_005"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_006"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_007"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_008"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkLeft_009"],
 
 
     ]
    andWithRightOrientationTexture:
   @[
-    [SKTexture textureWithImageNamed:@"WalkRight_000"],
-    [SKTexture textureWithImageNamed:@"WalkRight_001"],
-    [SKTexture textureWithImageNamed:@"WalkRight_002"],
-    [SKTexture textureWithImageNamed:@"WalkRight_003"],
-    [SKTexture textureWithImageNamed:@"WalkRight_004"],
-    [SKTexture textureWithImageNamed:@"WalkRight_005"],
-    [SKTexture textureWithImageNamed:@"WalkRight_006"],
-    [SKTexture textureWithImageNamed:@"WalkRight_007"],
-    [SKTexture textureWithImageNamed:@"WalkRight_008"],
-    [SKTexture textureWithImageNamed:@"WalkRight_009"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_000"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_001"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_002"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_003"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_004"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_005"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_006"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_007"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_008"],
+    [[self.sharedManager walkTextureAtlas] textureNamed:@"WalkRight_009"]
 
     ]
                                                                 
@@ -291,6 +302,10 @@ const static double kWalkActionDuration = 0.30;
 }
 
 
+-(TextureManager *)sharedManager{
+    
+    return [TextureManager sharedManager];
+}
 
 
 @end
